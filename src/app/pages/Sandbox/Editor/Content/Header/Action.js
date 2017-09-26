@@ -1,29 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styled from "react-emotion";
-import { withTheme } from "theming";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled, { css } from 'react-emotion';
+import { withTheme } from 'theming';
 
-import MoreInfoIcon from "react-icons/lib/md/arrow-drop-down";
+import MoreInfoIcon from 'react-icons/lib/md/arrow-drop-down';
 
-import Tooltip from "app/components/Tooltip";
+import Tooltip from 'app/components/Tooltip';
 
 const styles = props =>
-  `
-  display: flex !important;
-  transition: 0.3s ease all;
-  flex-direction: row;
-  align-items: center;
-  vertical-align: middle;
-  font-size: .875rem;
-  line-height: 1;
-  height: 100%;
-  color: rgba(255,255,255,0.7);
-  cursor: pointer;
-  box-sizing: inherit;
-  border-bottom: 2px solid transparent;
-  z-index: 1;
-  ${props.highlight
-    ? `
+  css`
+    display: flex !important;
+    transition: 0.3s ease all;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 0.875rem;
+    line-height: 1;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    box-sizing: inherit;
+    border-bottom: 2px solid transparent;
+    z-index: 1;
+    ${props.highlight
+      ? `
       background-color: ${props.theme.secondary.darken(0.1)()};
       color: white;
       border-bottom: 1px solid ${props.theme.secondary.darken(0.1)()};
@@ -32,16 +32,16 @@ const styles = props =>
         background-color: ${props.theme.secondary.darken(0.2)()};
       }
   `
-    : `
+      : `
 
     &:hover {
       color: rgba(255,255,255, 1);
       border-color: ${props.hideBottomHighlight
-        ? "transparent"
+        ? 'transparent'
         : props.theme.secondary()}
     }
-  `}
-`;
+  `};
+  `;
 
 const Title = styled.span`
   padding-left: 0.5rem;
@@ -53,7 +53,7 @@ const Title = styled.span`
   }`};
 `;
 
-const Action = withTheme(styled.div`${styles}`);
+const Action = withTheme(styled.div`${styles};`);
 
 const ActionLink = withTheme(styled(Link)`
   ${styles};
@@ -130,7 +130,7 @@ export default ({
           {title !== undefined && (
             <Title unresponsive={unresponsive}>{title}</Title>
           )}
-          {moreInfo && <MoreInfoIcon style={{ fontSize: "1.1rem" }} />}
+          {moreInfo && <MoreInfoIcon style={{ fontSize: '1.1rem' }} />}
         </IconContainer>
       </ActionTooltip>
     );
@@ -143,7 +143,7 @@ export default ({
           {title !== undefined && (
             <Title unresponsive={unresponsive}>{title}</Title>
           )}
-          {moreInfo && <MoreInfoIcon style={{ fontSize: "1.1rem" }} />}
+          {moreInfo && <MoreInfoIcon style={{ fontSize: '1.1rem' }} />}
         </IconContainer>
       </Action>
     );
@@ -158,7 +158,7 @@ export default ({
             {title !== undefined && (
               <Title unresponsive={unresponsive}>{title}</Title>
             )}
-            {moreInfo && <MoreInfoIcon style={{ fontSize: "1.1rem" }} />}
+            {moreInfo && <MoreInfoIcon style={{ fontSize: '1.1rem' }} />}
           </IconContainer>
         </ActionTooltip>
       </ActionA>
@@ -174,7 +174,7 @@ export default ({
             {title !== undefined && (
               <Title unresponsive={unresponsive}>{title}</Title>
             )}
-            {moreInfo && <MoreInfoIcon style={{ fontSize: "1.1rem" }} />}
+            {moreInfo && <MoreInfoIcon style={{ fontSize: '1.1rem' }} />}
           </IconContainer>
         </ActionTooltip>
       </ActionLink>
@@ -188,7 +188,7 @@ export default ({
         {title !== undefined && (
           <Title unresponsive={unresponsive}>{title}</Title>
         )}
-        {moreInfo && <MoreInfoIcon style={{ fontSize: "1.1rem" }} />}
+        {moreInfo && <MoreInfoIcon style={{ fontSize: '1.1rem' }} />}
       </IconContainer>
     </ActionLink>
   );

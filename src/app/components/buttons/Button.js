@@ -5,11 +5,21 @@ import styled, { css, keyframes } from 'react-emotion';
 import theme from 'common/theme';
 
 const getBackgroundColor = ({ disabled, red, secondary }) => {
-  if (disabled) return `background: ${theme.background2.darken(0.1)()}`;
-  if (secondary) return `background: #3A4B5D`;
+  if (disabled) return css`background: ${theme.background2.darken(0.1)()};`;
+  if (secondary) return css`background: #3a4b5d;`;
   if (red)
-    return `background-image: linear-gradient(270deg, #F27777, #400000);`;
-  return `background-image: linear-gradient(270deg, #fed29d, #A58B66, #7abae8, #56a0d6);`;
+    return css`
+      background-image: linear-gradient(270deg, #f27777, #400000);
+    `;
+  return css`
+    background-image: linear-gradient(
+      270deg,
+      #fed29d,
+      #a58b66,
+      #7abae8,
+      #56a0d6
+    );
+  `;
 };
 
 const getColor = ({ disabled, secondary }) => {
@@ -55,17 +65,14 @@ const styles = props => css`
   ${!props.disabled && `box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);`};
   width: ${props.block ? '100%' : 'inherit'};
 
-  ${() => {
-    if (props.small) {
-      return css`
+  ${props.small
+    ? css`
         padding: 0.5rem 0.75rem;
         font-size: 0.875rem;
-      `;
-    }
-    return css`
-      padding: 0.65rem 2.25rem;
-    `;
-  }};
+      `
+    : css`
+        padding: 0.65rem 2.25rem;
+      `};
 
   user-select: none;
   text-decoration: none;

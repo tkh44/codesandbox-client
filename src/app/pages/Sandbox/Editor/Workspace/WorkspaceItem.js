@@ -45,10 +45,7 @@ const ItemHeader = withTheme(styled.div`
   vertical-align: middle;
   height: calc(3rem - 1px);
   margin: 0;
-  color: ${props => {
-    console.log(props.theme);
-    return props.theme.white;
-  }};
+  color: ${props => props.theme.white};
   cursor: pointer;
 `);
 
