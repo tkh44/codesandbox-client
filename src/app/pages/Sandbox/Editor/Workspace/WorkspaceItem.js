@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 import styled from 'react-emotion';
 import { withTheme } from 'theming';
@@ -44,7 +45,10 @@ const ItemHeader = withTheme(styled.div`
   vertical-align: middle;
   height: calc(3rem - 1px);
   margin: 0;
-  color: ${props => props.theme.white};
+  color: ${props => {
+    console.log(props.theme);
+    return props.theme.white;
+  }};
   cursor: pointer;
 `);
 
