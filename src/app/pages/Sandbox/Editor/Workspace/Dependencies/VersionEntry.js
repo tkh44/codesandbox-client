@@ -1,17 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import CrossIcon from 'react-icons/lib/md/clear';
 import RefreshIcon from 'react-icons/lib/md/refresh';
 
 import EntryContainer from '../EntryContainer';
 import { IconArea, Icon } from '../Icon';
 
-const Version = styled.div`
+const Version = withTheme(styled.div`
   transition: 0.3s ease all;
   position: absolute;
   right: ${props => (props.hovering ? 3.5 : 1)}rem;
   color: ${props => props.theme.background.lighten(2).clearer(0.5)};
-`;
+`);
 
 type Props = {
   dependencies: { [key: string]: string },

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
 import Question from 'react-icons/lib/go/question';
 
 import Unlisted from 'react-icons/lib/go/link';

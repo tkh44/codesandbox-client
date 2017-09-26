@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import Margin from 'app/components/spacing/Margin';
 import delay from 'app/utils/animation/delay-effect';

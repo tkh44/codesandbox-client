@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import { connect } from 'react-redux';
 
 import type { CurrentUser } from 'common/types';
@@ -9,7 +10,7 @@ import PricingInfo from './PricingInfo';
 import PricingChoice from './PricingChoice';
 import Badge from './Badge';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   margin: 8rem auto;
   width: 940px;
   padding: 1rem;
@@ -17,7 +18,7 @@ const Container = styled.div`
 
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
-`;
+`);
 
 const Details = styled.div`
   display: flex;

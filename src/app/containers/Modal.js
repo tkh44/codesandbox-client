@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import styled, { injectGlobal } from 'styled-components';
+import styled, { injectGlobal } from 'react-emotion';
+import { withTheme } from 'theming';
 import { bindActionCreators } from 'redux';
 import Modal from 'react-modal';
 import type { Modal as ModalType } from 'common/types';
@@ -63,11 +64,11 @@ type Props = {
   modal: ModalType,
 };
 
-const BaseModal = styled.div`
+const BaseModal = withTheme(styled.div`
   background-color: ${props => props.theme.background3};
-`;
+`);
 
-const ModalTitle = styled.h1`
+const ModalTitle = withTheme(styled.h1`
   background-color: ${props => props.theme.secondary};
   color: white;
   padding: 1rem;
@@ -75,7 +76,7 @@ const ModalTitle = styled.h1`
   font-size: 1.25rem;
   text-align: center;
   background-image: linear-gradient(-225deg, #31b0ff 0%, #47a8e5 100%);
-`;
+`);
 
 const ModalBody = styled.div`
   background-color: white;

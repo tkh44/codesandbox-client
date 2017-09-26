@@ -1,13 +1,14 @@
 // @flow
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import MenuIconSVG from 'react-icons/lib/md/menu';
 
 import type { Sandbox } from 'common/types';
 import ModeIcons from 'app/components/sandbox/ModeIcons';
 import EditorLink from './EditorLink';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   position: relative;
   display: flex;
   flex-direction: row;
@@ -17,7 +18,7 @@ const Container = styled.div`
   box-sizing: border-box;
   border-bottom: 1px solid ${props => props.theme.background2.darken(0.3)};
   background-color: ${props => props.theme.background2};
-`;
+`);
 
 const MenuIcon = styled(MenuIconSVG)`
   font-size: 2rem;

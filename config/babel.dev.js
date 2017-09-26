@@ -11,6 +11,7 @@ module.exports = {
     'react',
   ],
   plugins: [
+    [require.resolve('babel-plugin-emotion'), { sourceMap: true }],
     require.resolve('babel-plugin-transform-async-to-generator'),
     require.resolve('babel-plugin-transform-object-rest-spread'),
     require.resolve('babel-plugin-transform-class-properties'),

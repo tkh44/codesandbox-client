@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import ShareIcon from 'react-icons/lib/md/share';
 import Files from 'embed/components/Files';
 import ModeIcons from 'app/components/sandbox/ModeIcons';
@@ -44,7 +45,7 @@ const PaddedPreference = styled(Preference)`
   }
 `;
 
-const ShareOptions = styled.div`
+const ShareOptions = withTheme(styled.div`
   position: absolute;
   top: calc(100% + 0.25rem);
   left: -250px;
@@ -67,7 +68,7 @@ const ShareOptions = styled.div`
     margin-bottom: 1rem;
     font-weight: 400;
   }
-`;
+`);
 
 const Inputs = styled.div`
   margin-top: 0.5rem;

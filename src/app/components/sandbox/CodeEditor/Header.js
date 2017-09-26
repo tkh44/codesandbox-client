@@ -1,10 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 
 import Button from 'app/components/buttons/Button';
 import { Tooltip } from 'react-tippy';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   display: flex;
   background-color: ${props => props.theme.background};
   box-shadow: 0 3px 3px ${props => props.theme.background2};
@@ -16,12 +17,12 @@ const Container = styled.div`
   justify-content: space-between;
   vertical-align: middle;
   align-items: center;
-`;
+`);
 
-const Path = styled.span`
+const Path = withTheme(styled.span`
   color: ${props => props.theme.background.lighten(1.25)};
   padding-right: 0.1rem;
-`;
+`);
 
 const Buttons = styled.div`
   display: flex;

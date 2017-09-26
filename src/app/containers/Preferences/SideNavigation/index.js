@@ -1,17 +1,18 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
+import { withTheme } from 'theming';
 
 import TwitterIcon from 'react-icons/lib/fa/twitter';
 import GithubIcon from 'react-icons/lib/fa/github';
 
 import Relative from 'app/components/Relative';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   flex: 1;
   background-color: ${props => props.theme.background2};
   width: 100%;
   padding-bottom: 5rem;
-`;
+`);
 
 const Title = styled.h2`
   font-weight: 500;
@@ -52,7 +53,7 @@ const Item = styled.div`
     `};
 `;
 
-const Selector = styled.div`
+const Selector = withTheme(styled.div`
   transition: 0.2s ease all;
   position: absolute;
   top: 0px;
@@ -65,7 +66,7 @@ const Selector = styled.div`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 
   transform: translateY(${props => props.offset + 1}px);
-`;
+`);
 
 const SocialIcons = styled.div`
   position: absolute;

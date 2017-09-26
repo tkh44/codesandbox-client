@@ -24,7 +24,7 @@ class Npm$StyledComponents$ThemeProvider extends React$Component {
   props: $npm$styledComponents$ThemeProviderProps;
 }
 
-declare module 'styled-components' {
+declare module 'react-emotion' {
   declare type Interpolation = $npm$styledComponents$Interpolation;
   declare type NameGenerator = $npm$styledComponents$NameGenerator;
 

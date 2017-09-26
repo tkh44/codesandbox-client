@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 
 import Navigation from 'app/containers/Navigation';
 import Centered from 'app/components/flex/Centered';
@@ -38,10 +39,10 @@ const StyledInput = styled(Input)`
   margin-bottom: 2rem;
 `;
 
-const ErrorMessage = styled.div`
+const ErrorMessage = withTheme(styled.div`
   color: ${props => props.theme.red};
   margin-bottom: 2rem;
-`;
+`);
 
 type State = {
   url: string,

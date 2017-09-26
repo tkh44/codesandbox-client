@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import type { Badge as BadgeT } from 'common/types';
 import { Link } from 'react-router-dom';
 

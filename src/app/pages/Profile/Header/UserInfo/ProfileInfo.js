@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import GithubIcon from 'react-icons/lib/go/mark-github';
 
 import Row from 'app/components/flex/Row';
@@ -8,7 +9,7 @@ import delayEffect from 'app/utils/animation/delay-effect';
 import Margin from 'app/components/spacing/Margin';
 import PatronStar from 'app/components/user/PatronStar';
 
-const ProfileImage = styled.img`
+const ProfileImage = withTheme(styled.img`
   border-radius: 2px;
   margin-right: 1.5rem;
 
@@ -16,7 +17,7 @@ const ProfileImage = styled.img`
   background-color: ${props => props.theme.background2};
 
   ${delayEffect(0.05)};
-`;
+`);
 
 const Name = styled.div`
   ${delayEffect(0.1)};

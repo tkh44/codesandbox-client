@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import delayEffect from '../../utils/animation/delay-effect';
 
 export default styled.h1`

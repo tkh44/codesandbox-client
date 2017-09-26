@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 
 import type { Sandbox } from 'common/types';
 
@@ -8,7 +9,7 @@ import Files from './Files';
 import EntryContainer from '../../app/pages/Sandbox/Editor/Workspace/EntryContainer';
 import Padding from '../../app/components/spacing/Padding';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   flex: 250px;
   width: 250px;
   height: 100%;
@@ -16,7 +17,7 @@ const Container = styled.div`
   z-index: 10;
   background-color: ${props => props.theme.background.darken(0.1)};
   overflow: auto;
-`;
+`);
 
 const Title = styled.h2`
   font-weight: 400;
@@ -41,11 +42,11 @@ const Description = styled.p`
   padding: 0 1rem;
 `;
 
-const Item = styled.div`
+const Item = withTheme(styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   ${({ hover, theme }) =>
-    hover && `&:hover { background-color: ${theme.background.darken(0.3)()};}`};
-`;
+    hover && `)&:hover { background-color: ${theme.background.darken(0.3)()};}`};
+`);
 
 const Version = styled.div`
   position: absolute;

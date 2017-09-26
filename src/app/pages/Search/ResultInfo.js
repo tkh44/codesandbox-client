@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import { Stats, ClearAll } from 'react-instantsearch/dom';
 
 const ClearAllContainer = styled.div`float: right;`;

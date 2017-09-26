@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import CloseIcon from 'react-icons/lib/md/close';
 import InfoIcon from 'react-icons/lib/md/info';
 import ErrorIcon from 'react-icons/lib/md/error';
@@ -9,7 +10,7 @@ import theme from 'common/theme';
 
 import type { NotificationButton } from 'app/store/notifications/reducer';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   position: relative;
   width: 300px;
   padding: 1rem 0;
@@ -28,9 +29,9 @@ const Container = styled.div`
   }};
 
   background-color: ${theme.background2.darken(0.2)()};
-`;
+`);
 
-const Content = styled.div`
+const Content = withTheme(styled.div`
   display: flex;
   align-items: center;
   padding: 0 1rem;
@@ -40,7 +41,7 @@ const Content = styled.div`
   box-sizing: border-box;
   color: ${() => theme.white()};
   font-size: 1rem;
-`;
+`);
 
 const Title = styled.span`
   display: inline-block;
@@ -57,7 +58,7 @@ const Buttons = styled.div`
   flex: auto;
 `;
 
-const Button = styled.div`
+const Button = withTheme(styled.div`
   transition: 0.3s ease all;
   position: relative;
   display: block;
@@ -79,7 +80,7 @@ const Button = styled.div`
       return theme.secondary.darken(0.2);
     }};
   }
-`;
+`);
 
 const CloseIconHandler = styled.div`
   position: absolute;

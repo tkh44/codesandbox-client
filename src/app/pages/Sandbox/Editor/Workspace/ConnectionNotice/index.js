@@ -1,13 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import { connect } from 'react-redux';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   color: ${props => props.theme.red};
   background-color: ${props => props.theme.redBackground};
   padding: 1rem;
   font-size: 0.75rem;
-`;
+`);
 
 const mapStateToProps = state => ({
   connected: state.connectionStatus.connected,

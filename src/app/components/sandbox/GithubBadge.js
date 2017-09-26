@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
+import { withTheme } from 'theming';
 
 import GithubIcon from 'react-icons/lib/go/mark-github';
 
@@ -28,13 +29,13 @@ const Text = styled.span`
   padding: 3px 5px;
 `;
 
-const Icon = styled.span`
+const Icon = withTheme(styled.span`
   display: inline-block;
   padding: 3px 5px;
   background-color: #4f5459;
   border-radius: 2px;
   color: ${props => props.theme.background};
-`;
+`);
 
 const StyledA = styled.a`text-decoration: none;`;
 

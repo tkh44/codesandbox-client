@@ -2,7 +2,7 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import moment from 'moment';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import type { CurrentUser } from 'common/types';
 

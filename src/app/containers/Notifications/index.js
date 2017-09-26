@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import { bindActionCreators } from 'redux';
-import styled, { injectGlobal } from 'styled-components';
+import styled, { injectGlobal } from 'react-emotion';
 import { connect } from 'react-redux';
 import { spring, Motion } from 'react-motion';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';

@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import { Link } from 'react-router-dom';
 import { Highlight } from 'react-instantsearch/dom';
 
@@ -11,7 +12,7 @@ import SandboxInfo from './SandboxInfo';
 import { sandboxUrl } from '../../../utils/url-generator';
 import Row from '../../../components/flex/Row';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   transition: 0.3s ease all;
 
   position: relative;
@@ -34,7 +35,7 @@ const Container = styled.div`
     box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.24);
     background-color: ${props => props.theme.background.lighten(0.1)};
   }
-`;
+`);
 
 const StyledLink = styled(Link)`
   text-transform: none;

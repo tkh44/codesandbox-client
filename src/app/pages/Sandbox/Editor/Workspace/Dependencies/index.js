@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import Margin from 'app/components/spacing/Margin';
 import sandboxActionCreators from 'app/store/entities/sandboxes/actions';

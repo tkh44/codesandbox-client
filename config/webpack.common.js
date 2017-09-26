@@ -27,7 +27,7 @@ module.exports = {
       require.resolve('./polyfills'),
       path.join(paths.embedSrc, 'index.js'),
     ],
-    vendor: ['react', 'react-dom', 'styled-components'],
+    vendor: ['react', 'react-dom', 'react-emotion'],
   },
   target: 'web',
   node: {

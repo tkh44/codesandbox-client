@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -25,11 +26,11 @@ import SvelteIcon from '../../components/logos/Svelte';
 
 import Row from '../../components/flex/Row';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${props => props.theme.background};
-`;
+`);
 
 const RowContainer = styled(Row)`
   justify-content: center;

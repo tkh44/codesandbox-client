@@ -1,8 +1,9 @@
 // @flow
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 
-const InputContainer = styled.div`
+const InputContainer = withTheme(styled.div`
   display: inline-block;
   overflow: visible;
   input {
@@ -28,7 +29,7 @@ const InputContainer = styled.div`
       outline: none;
     }
   }
-`;
+`);
 
 type Props = {
   title: string,

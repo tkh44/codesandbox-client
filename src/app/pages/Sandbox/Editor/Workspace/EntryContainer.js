@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from "react-emotion";
+import { withTheme } from "theming";
 
 export const getContainerStyles = props => {
   const { theme } = props;
@@ -6,14 +7,14 @@ export const getContainerStyles = props => {
     ? theme.primary
     : theme.templateColor || theme.secondary;
   let styles = `
-    ${styleProps => styleProps.noTransition || 'transition: 0.3s ease all;'}
+    ${styleProps => styleProps.noTransition || "transition: 0.3s ease all;"}
     position: relative;
     display: flex;
     font-size: 14px;
     padding: 0.6rem;
     padding-left: ${props.depth != null
       ? `${props.depth + 1.5}rem`
-      : 'calc(1rem - 2px)'};
+      : "calc(1rem - 2px)"};
     color: ${theme.background.lighten(2)()};
     text-decoration: none;
     font-weight: 400;
@@ -24,7 +25,7 @@ export const getContainerStyles = props => {
 
     &:hover {
       ${props.active || props.editing
-        ? ''
+        ? ""
         : `
         background-color: ${color.clearer(0.9)()};
         color: ${theme.background.lighten(5)()};
@@ -62,6 +63,6 @@ export const getContainerStyles = props => {
   return styles;
 };
 
-export default styled.span`
+export default withTheme(styled.span`
   ${props => getContainerStyles(props)};
-`;
+`);

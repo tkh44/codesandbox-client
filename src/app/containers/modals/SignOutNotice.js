@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -8,12 +9,12 @@ import modalActionCreators from 'app/store/modal/actions';
 import Button from '../../components/buttons/Button';
 import Row from '../../components/flex/Row';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   background-color: ${props => props.theme.background};
   padding: 1rem;
   margin: 0;
   color: rgba(255, 255, 255, 0.8);
-`;
+`);
 
 const Heading = styled.h2`margin-top: 0;`;
 

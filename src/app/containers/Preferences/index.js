@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 
 import { currentUserSelector } from 'app/store/user/selectors';
 import type { CurrentUser } from 'common/types';
@@ -21,12 +22,12 @@ import PaymentInfo from './PaymentInfo';
 import Integrations from './Integrations';
 import Badges from './Badges';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   display: flex;
   flex-direction: row;
   background-color: ${props => props.theme.background};
   color: rgba(255, 255, 255, 0.8);
-`;
+`);
 
 const ContentContainer = styled.div`
   flex: 2;

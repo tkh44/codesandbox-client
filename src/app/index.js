@@ -2,7 +2,7 @@ import React from 'react';
 import { AppContainer } from 'react-hot-loader';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'theming';
 import { ConnectedRouter } from 'react-router-redux';
 import registerServiceWorker from 'common/registerServiceWorker';
 import 'normalize.css';

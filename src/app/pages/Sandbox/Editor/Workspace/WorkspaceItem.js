@@ -1,9 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 
 import ExpandIcon from 'react-icons/lib/md/keyboard-arrow-down';
 
-const ChildContainer = styled.div`
+const ChildContainer = withTheme(styled.div`
   position: relative;
   margin: 0;
   padding: 0;
@@ -13,7 +14,7 @@ const ChildContainer = styled.div`
 
   ${({ disabled }) =>
     disabled &&
-    `
+    `)
     pointer-events: none;
 
     &:after {
@@ -32,9 +33,9 @@ const ChildContainer = styled.div`
       background-color: rgba(0, 0, 0, 0.4);
     }
   `};
-`;
+`);
 
-const ItemHeader = styled.div`
+const ItemHeader = withTheme(styled.div`
   display: flex;
   align-items: center;
   position: relative;
@@ -45,7 +46,7 @@ const ItemHeader = styled.div`
   margin: 0;
   color: ${props => props.theme.white};
   cursor: pointer;
-`;
+`);
 
 const Title = styled.h3`
   font-size: 1rem;

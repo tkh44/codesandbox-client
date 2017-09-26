@@ -1,6 +1,7 @@
 // @flow eslint-disable
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 
 import WorkspaceInputContainer from '../WorkspaceInputContainer';
 import Button from '../../../../../components/buttons/Button';
@@ -19,18 +20,18 @@ const Inputs = styled.div`
   }
 `;
 
-const Dot = styled.div`
+const Dot = withTheme(styled.div`
   position: absolute;
   color: ${props => props.theme.white};
   right: 0;
   bottom: 0.4rem;
-`;
+`);
 
-const ErrorMessage = styled.div`
+const ErrorMessage = withTheme(styled.div`
   margin: 1rem;
   font-size: 0.875rem;
   color: ${props => props.theme.red};
-`;
+`);
 
 const initialState = {
   major: '',

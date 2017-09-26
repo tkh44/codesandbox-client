@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 
 import LeftIcon from 'react-icons/lib/fa/angle-left';
 import RightIcon from 'react-icons/lib/fa/angle-right';
@@ -25,7 +26,7 @@ const Container = styled.div`
 
 const Icons = styled.div`display: flex;`;
 
-const Icon = styled.div`
+const Icon = withTheme(styled.div`
   display: inline-block;
   color: ${props =>
     props.disabled ? props.theme.gray : props.theme.gray.darken(0.3)};
@@ -37,12 +38,12 @@ const Icon = styled.div`
 
   ${props =>
     !props.disabled &&
-    `
+    `)
     &:hover {
       background-color: #e2e2e2;
       cursor: pointer;
     }`};
-`;
+`);
 
 const AddressBarContainer = styled.div`
   width: 100%;

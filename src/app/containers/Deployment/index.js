@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from 'react-emotion';
+import { withTheme } from 'theming';
 
 import type { CurrentUser } from 'common/types';
 import { currentUserSelector } from 'app/store/user/selectors';
@@ -20,11 +21,11 @@ import delayOutEffect from 'app/utils/animation/delay-out-effect';
 import Cube from './Cube';
 import OpaqueLogo from './OpaqueLogo';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   background-color: ${props => props.theme.background};
   margin: 0;
   color: rgba(255, 255, 255, 0.8);
-`;
+`);
 
 const Title = styled.h1`
   font-weight: 500;

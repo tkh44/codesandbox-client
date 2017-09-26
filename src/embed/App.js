@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import styled from 'react-emotion';
+import { ThemeProvider } from 'theming';
 import { camelizeKeys } from 'humps';
 import 'whatwg-fetch';
 

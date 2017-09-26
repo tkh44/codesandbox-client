@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { createSelector } from 'reselect';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 
 import MaxWidth from 'app/components/flex/MaxWidth';
 import Fullscreen from 'app/components/flex/Fullscreen';
@@ -39,10 +40,10 @@ const Container = styled(Fullscreen)`
   background-image: linear-gradient(-180deg, #282d2f 0%, #1d1f20 100%);
 `;
 
-const Content = styled(Fullscreen)`
+const Content = withTheme(styled(Fullscreen)`
   border-top: 1px solid ${props => props.theme.background3};
   flex: 0 0 70px;
-`;
+`);
 
 const mapStateToProps = createSelector(
   usersSelector,

@@ -1,4 +1,4 @@
-import { injectGlobal } from 'styled-components';
+import { injectGlobal } from 'react-emotion';
 import 'react-tippy/dist/tippy.css';
 import { Tooltip } from 'react-tippy';
 

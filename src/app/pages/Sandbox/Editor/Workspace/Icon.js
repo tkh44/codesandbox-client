@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import fadeIn from 'app/utils/animation/fade-in';
 
-export const Icon = styled.div`
+export const Icon = withTheme(styled.div`
   position: relative;
   display: inline-block;
   transition: 0.3s ease color;
@@ -10,7 +11,7 @@ export const Icon = styled.div`
   &:hover {
     color: white;
   }
-`;
+`);
 
 export const IconArea = styled.div`
   position: absolute;

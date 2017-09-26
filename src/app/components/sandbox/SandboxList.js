@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 
@@ -40,7 +41,7 @@ const StatBody = styled.td`
   text-align: center;
 `;
 
-const Body = styled.tbody`
+const Body = withTheme(styled.tbody`
   margin-top: 3rem;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
   color: rgba(255, 255, 255, 0.7);
@@ -52,9 +53,9 @@ const Body = styled.tbody`
     margin: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
-`;
+`);
 
-const SandboxRow = styled.tr`
+const SandboxRow = withTheme(styled.tr`
   transition: 0.3s ease all;
   ${props => delayEffect(0.25 + props.index * 0.05, false)};
   border: none;
@@ -64,7 +65,7 @@ const SandboxRow = styled.tr`
     background-color: ${props => props.theme.primary.clearer(0.9)};
     color: rgba(255, 255, 255, 0.9);
   }
-`;
+`);
 
 type Props = {
   isCurrentUser: boolean,

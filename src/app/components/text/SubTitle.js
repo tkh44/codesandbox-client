@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import delayEffect from '../../utils/animation/delay-effect';
 
-export default styled.h2`
+export default withTheme(styled.h2`
   ${props =>
     props.delay != null && delayEffect(props.delay || 0)} text-align: center;
   width: 100%;
@@ -11,4 +12,4 @@ export default styled.h2`
   margin-top: 0;
   margin-bottom: 1.5rem;
   line-height: 1.4;
-`;
+`);

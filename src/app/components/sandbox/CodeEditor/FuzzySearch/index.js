@@ -1,5 +1,6 @@
 import * as React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
+import { withTheme } from 'theming';
 import { sortBy, groupBy, flatten } from 'lodash';
 import Downshift from 'downshift';
 import matchSorter from 'match-sorter';
@@ -11,7 +12,7 @@ import Input from 'app/components/Input';
 import EntryIcons from 'app/pages/Sandbox/Editor/Workspace/Files/DirectoryEntry/Entry/EntryIcons';
 import getType from 'app/store/entities/sandboxes/modules/utils/get-type';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   position: absolute;
 
   top: 0;
@@ -29,7 +30,7 @@ const Container = styled.div`
   width: 100%;
 
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
-`;
+`);
 
 const InputContainer = styled.div`
   padding: 0.5rem;
@@ -62,12 +63,12 @@ const Entry = styled.div`
     `};
 `;
 
-const CurrentModuleText = styled.div`
+const CurrentModuleText = withTheme(styled.div`
   position: absolute;
   right: 0.75rem;
   font-weight: 500;
   color: ${props => props.theme.secondary};
-`;
+`);
 
 const Name = styled.span`margin: 0 0.5rem;`;
 

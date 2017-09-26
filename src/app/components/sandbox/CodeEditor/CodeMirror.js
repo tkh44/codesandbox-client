@@ -1,7 +1,8 @@
 // @flow
 import * as React from 'react';
 import CodeMirror from 'codemirror';
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from 'react-emotion';
+import { withTheme } from 'theming';
 import type { Preferences, ModuleError } from 'common/types';
 
 import { getCodeMirror } from 'app/utils/codemirror';
@@ -51,7 +52,7 @@ const fontFamilies = (...families) =>
     )
     .join(', ');
 
-const CodeContainer = styled.div`
+const CodeContainer = withTheme(styled.div`
   position: relative;
   overflow: auto;
   width: 100%;
@@ -160,7 +161,7 @@ const CodeContainer = styled.div`
     animation: ${fadeInAnimation} 0.3s;
     background-color: #561011;
   }
-`;
+`);
 
 const handleError = (
   cm: typeof CodeMirror,

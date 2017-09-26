@@ -1,14 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import Button from 'app/components/buttons/Button';
 
-const Container = styled.div`
+const Container = withTheme(withTheme(styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${props => props.theme.background};
   color: rgba(255, 255, 255, 0.8);
   padding: 0.75rem;
-`;
+`));
 
 const Title = styled.div`
   display: flex;

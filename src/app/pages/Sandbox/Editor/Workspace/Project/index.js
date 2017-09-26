@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import { Link } from 'react-router-dom';
 import ConfirmLink from 'app/components/ConfirmLink';
 import GithubBadge from 'app/components/sandbox/GithubBadge';
@@ -33,13 +34,13 @@ const UserLink = styled(Link)`
   font-size: 0.875rem;
 `;
 
-const StatsContainer = styled.div`
+const StatsContainer = withTheme(styled.div`
   border-top: 1px solid ${props => props.theme.background2};
   padding: 1rem;
   font-size: 0.875rem;
   box-sizing: border-box;
   color: rgba(255, 255, 255, 0.8);
-`;
+`);
 
 const PrivacyContainer = styled.div`
   margin: 0 1rem;

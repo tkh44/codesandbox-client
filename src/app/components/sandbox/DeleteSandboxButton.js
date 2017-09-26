@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import DeleteIcon from 'react-icons/lib/md/delete';
 import Tooltip from 'app/components/Tooltip';
 

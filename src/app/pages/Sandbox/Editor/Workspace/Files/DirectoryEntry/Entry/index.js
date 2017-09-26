@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import { DragSource } from 'react-dnd';
 
 import FileIcon from 'react-icons/lib/fa/file';

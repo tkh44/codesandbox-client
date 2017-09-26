@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'react-emotion';
 
 import theme from 'common/theme';
 

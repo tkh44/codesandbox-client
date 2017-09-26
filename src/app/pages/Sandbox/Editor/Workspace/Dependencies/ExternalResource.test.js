@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'theming';
 
 import ExternalResource from './ExternalResource';
 import theme from '../../../../../../common/theme';

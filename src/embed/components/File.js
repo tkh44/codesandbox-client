@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import FunctionIconSvg from 'react-icons/lib/fa/code';
 import DirectoryIconSvg from 'react-icons/lib/go/file-directory';
 import Entry from 'app/pages/Sandbox/Editor/Workspace/EntryContainer';

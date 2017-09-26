@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import Navigation from 'app/containers/Navigation';
 import Centered from 'app/components/flex/Centered';

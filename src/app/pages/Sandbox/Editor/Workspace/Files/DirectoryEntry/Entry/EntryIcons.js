@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 
 import ProjectIcon from 'react-icons/lib/go/file-code';
 import FunctionIcon from 'react-icons/lib/fa/code';
@@ -13,13 +14,13 @@ import RawIcon from 'react-icons/lib/go/file-text';
 import ReactIcon from 'app/components/ReactIcon';
 import TypeScriptIcon from 'app/components/TypeScriptIcon';
 
-const NotSyncedIconWithMargin = styled(NotSyncedIcon)`
+const NotSyncedIconWithMargin = withTheme(styled(NotSyncedIcon)`
   margin-left: -20px;
   margin-right: 6px;
   color: ${props => props.theme.templateColor || props.theme.secondary};
-`;
+`);
 
-const RedIcon = styled.span`color: ${props => props.theme.red};`;
+const RedIcon = withTheme(styled.span`color: ${props => props.theme.red};`);
 
 const StyledFolderIcon = styled.span`
   svg {

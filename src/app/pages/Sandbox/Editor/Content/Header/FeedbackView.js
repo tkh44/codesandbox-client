@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import FeedbackIcon from 'react-icons/lib/go/comment-discussion';
 import Button from 'app/components/buttons/Button';
 
@@ -12,7 +13,7 @@ const Container = styled.div`
   height: 100%;
 `;
 
-const MessageView = styled.div`
+const MessageView = withTheme(styled.div`
   position: absolute;
   top: calc(100% + 0.25rem);
   right: 0;
@@ -43,7 +44,7 @@ const MessageView = styled.div`
     color: white;
     margin-bottom: 0.5rem;
   }
-`;
+`);
 
 type Props = {
   sendMessage: (message: string) => void,

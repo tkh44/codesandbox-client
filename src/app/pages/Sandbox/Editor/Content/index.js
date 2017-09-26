@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import styled from 'react-emotion';
+import { ThemeProvider } from 'theming';
 import { createSelector } from 'reselect';
 import { Prompt } from 'react-router-dom';
 import { bindActionCreators } from 'redux';

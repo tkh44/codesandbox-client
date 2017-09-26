@@ -6,6 +6,7 @@
         "react"
       ],
       "plugins": [
+        "emotion",
         "babel-plugin-transform-async-to-generator",
         "babel-plugin-transform-object-rest-spread",
         "babel-plugin-transform-class-properties",

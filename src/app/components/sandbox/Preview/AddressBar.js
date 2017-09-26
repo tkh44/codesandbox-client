@@ -1,11 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   position: relative;
   color: ${props => props.theme.gray.darken(0.2)()};
   vertical-align: middle;
-`;
+`);
 
 const InputContainer = styled.div`
   input {

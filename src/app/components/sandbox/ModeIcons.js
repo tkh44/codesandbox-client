@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from 'react-emotion';
+import { withTheme } from 'theming';
 
 import Tooltip from 'app/components/Tooltip';
 
@@ -105,13 +106,13 @@ const Icon = styled.div`
   height: 100%;
 `;
 
-export const EditorIcon = styled(Icon)`
+export const EditorIcon = withTheme(styled(Icon)`
   background-color: ${({ theme }) => theme.templateColor || theme.secondary};
-`;
+`);
 
-export const PreviewIcon = styled(Icon)`
+export const PreviewIcon = withTheme(styled(Icon)`
   background-color: ${({ theme }) => theme.primary};
-`;
+`);
 
 type Props = {
   showEditor: boolean,

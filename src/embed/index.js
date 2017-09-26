@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'theming';
 import 'normalize.css';
 
 import theme from '../common/theme';

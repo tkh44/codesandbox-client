@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 
 import { injectStripe, CardElement } from 'react-stripe-elements';
 
@@ -24,11 +25,11 @@ const NameInput = styled(Input)`
   height: 32.8px;
 `;
 
-const ErrorText = styled.div`
+const ErrorText = withTheme(styled.div`
   color: ${props => props.theme.red};
   font-size: 0.875rem;
   margin: 0.25rem 0;
-`;
+`);
 
 const Label = styled.label`
   color: rgba(255, 255, 255, 0.5);

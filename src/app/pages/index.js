@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Loadable from 'react-loadable';
@@ -27,11 +28,11 @@ const Container = styled.div`
   margin: 0;
 `;
 
-const Content = styled.div`
+const Content = withTheme(styled.div`
   flex: auto;
   display: flex;
   background-color: ${props => props.theme.background2};
-`;
+`);
 
 const SignIn = Loadable({
   loader: () => import('./SignIn'),

@@ -1,7 +1,9 @@
 // @flow
 
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
+
 import Preview from 'app/components/sandbox/Preview';
 import CodeEditor from 'app/components/sandbox/CodeEditor';
 import {
@@ -12,12 +14,12 @@ import {
 
 import type { Sandbox, Module, ModuleError } from 'common/types';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   display: flex;
   position: relative;
   background-color: ${props => props.theme.background2};
   height: calc(100% - 3rem);
-`;
+`);
 
 const Split = styled.div`
   position: relative;

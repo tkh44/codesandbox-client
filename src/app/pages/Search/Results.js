@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import { Hits, Pagination } from 'react-instantsearch/dom';
 import Centered from 'app/components/flex/Centered';

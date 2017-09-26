@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import Media from 'react-media';
 
 import Save from 'react-icons/lib/md/save';
@@ -38,7 +39,7 @@ import Action from './Action';
 import FeedbackView from './FeedbackView';
 import ShareView from './ShareView';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -53,7 +54,7 @@ const Container = styled.div`
   flex: 0 0 3rem;
   box-sizing: border-box;
   border-bottom: 1px solid ${props => props.theme.background2.darken(0.3)};
-`;
+`);
 
 const Right = styled.div`
   display: flex;

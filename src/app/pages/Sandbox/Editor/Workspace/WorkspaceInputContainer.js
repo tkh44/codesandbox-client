@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 
-export default styled.div`
+export default withTheme(styled.div`
   display: inline-block;
   display: flex;
   overflow: visible;
@@ -32,4 +33,4 @@ export default styled.div`
   input::-webkit-input-placeholder {
     color: ${props => props.theme.background2.lighten(2.9)};
   }
-`;
+`);

@@ -1,5 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "react-emotion";
+import { withTheme } from "theming";
 
 const getColor = ({ right, offMode, secondary, theme }) => {
   if (right) {
@@ -9,7 +10,7 @@ const getColor = ({ right, offMode, secondary, theme }) => {
   return secondary ? theme.primary : theme.templateColor || theme.secondary;
 };
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   transition: 0.3s ease all;
   position: relative;
   background-color: ${getColor};
@@ -29,10 +30,10 @@ const Container = styled.div`
     margin-top: -.5em;
     line-height: 1;
   }
-`;
+`);
 
 const getSize = ({ small }) =>
-  small ? 'calc(1.5rem + 2px)' : 'calc(2rem + 2px)';
+  small ? "calc(1.5rem + 2px)" : "calc(2rem + 2px)";
 
 const Dot = styled.div`
   transition: inherit;
@@ -41,7 +42,7 @@ const Dot = styled.div`
   width: 1rem;
   left: 0.1rem;
   border-radius: 4px;
-  transform: translateX(${props => (props.right ? getSize(props) : '0')});
+  transform: translateX(${props => (props.right ? getSize(props) : "0")});
   top: 0.1rem;
   background-color: white;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);

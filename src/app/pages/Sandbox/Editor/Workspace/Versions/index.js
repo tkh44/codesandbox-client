@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 
 import WorkspaceSubtitle from '../WorkspaceSubtitle';
 import EntryContainer from '../EntryContainer';
@@ -12,19 +13,19 @@ type Props = {
   // versionActions: typeof versionEntity.actions,
 };
 
-const Description = styled.p`
+const Description = withTheme(styled.p`
   color: ${props => props.theme.background.lighten(2)};
   margin-top: 0;
   padding: 0 1rem;
   line-height: 1.2;
   font-size: 0.875rem;
-`;
+`);
 
-const VersionDate = styled.div`
+const VersionDate = withTheme(styled.div`
   position: absolute;
   right: 1rem;
   color: ${props => props.theme.background.lighten(2).clearer(0.5)};
-`;
+`);
 
 // const mapDispatchToProps = dispatch => ({
 //   versionActions: bindActionCreators(versionEntity.actions, dispatch),

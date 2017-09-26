@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import SearchIcon from 'react-icons/lib/go/search';
 
 import history from 'app/utils/history';

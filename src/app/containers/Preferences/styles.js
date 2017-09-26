@@ -1,7 +1,9 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
+
 import Preference from 'app/components/Preference';
 
-export const Container = styled.div`
+export const Container = withTheme(styled.div`
   color: ${props => props.theme.white};
   width: 100%;
   color: rgba(255, 255, 255, 0.8);
@@ -11,7 +13,7 @@ export const Container = styled.div`
       padding-top: 0;
     }
   }
-`;
+`);
 
 export const Subheading = styled.div`
   color: rgba(255, 255, 255, 0.8);

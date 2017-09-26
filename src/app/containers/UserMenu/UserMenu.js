@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 import delayEffect from 'app/utils/animation/delay-effect';
 import { Link } from 'react-router-dom';
 
@@ -10,7 +11,7 @@ import SettingsIcon from 'react-icons/lib/md/settings';
 import { profileUrl, patronUrl } from 'app/utils/url-generator';
 import PatronBadge from '../../utils/badges/PatronBadge';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   position: absolute;
   background-color: ${props => props.theme.background2.darken(0.5)};
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.75);
@@ -23,9 +24,9 @@ const Container = styled.div`
   min-width: 200px;
 
   z-index: 20;
-`;
+`);
 
-const Item = styled.div`
+const Item = withTheme(styled.div`
   transition: 0.3s ease all;
   display: flex;
   align-items: center;
@@ -44,7 +45,7 @@ const Item = styled.div`
     color: white;
     background-color: ${props => props.theme.secondary.clearer(0.9)};
   }
-`;
+`);
 
 const Icon = styled.span`margin-right: 0.75rem;`;
 

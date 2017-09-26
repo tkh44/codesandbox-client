@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from 'react-emotion';
 import Logo from './Logo';
 import Centered from './flex/Centered';
 

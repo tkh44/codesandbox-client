@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 const Highlight = styled.strong`color: rgba(255, 255, 255, 0.8);`;
 

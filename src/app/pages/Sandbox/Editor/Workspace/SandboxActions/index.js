@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import Button from 'app/components/buttons/Button';
 

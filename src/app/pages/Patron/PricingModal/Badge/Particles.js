@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'react-emotion';
 
 import badges from 'app/utils/badges/patron-info';
 

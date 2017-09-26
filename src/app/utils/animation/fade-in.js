@@ -1,4 +1,4 @@
-import { keyframes } from 'styled-components';
+import { keyframes } from 'react-emotion';
 
 const animation = keyframes`
   0%   { opacity: 0; }

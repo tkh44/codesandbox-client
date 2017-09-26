@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
+import { withTheme } from 'theming';
 
 import CrossIcon from 'react-icons/lib/md/clear';
 
@@ -50,7 +51,7 @@ const Heading = styled.div`
 
 const Info = styled.div`font-weight: 400;`;
 
-const Action = styled.div`
+const Action = withTheme(styled.div`
   display: flex;
   transition: 0.3s ease all;
   border: 1px solid
@@ -78,7 +79,7 @@ const Action = styled.div`
     background-color: ${props =>
       props.red ? 'rgba(255, 0, 0, 0.6)' : props.theme.secondary};
   }
-`;
+`);
 
 type DetailProps = {
   heading: string,

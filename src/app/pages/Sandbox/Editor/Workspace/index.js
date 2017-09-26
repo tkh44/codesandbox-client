@@ -5,7 +5,8 @@ import { createSelector } from 'reselect';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import styled, { ThemeProvider } from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme, ThemeProvider } from 'theming';
 
 import type { Sandbox, User } from 'common/types';
 import sandboxActionCreators from 'app/store/entities/sandboxes/actions';
@@ -28,7 +29,7 @@ import Logo from './Logo';
 import ConnectionNotice from './ConnectionNotice';
 import Advertisement from './Advertisement';
 
-const Container = styled.div`
+const Container = withTheme(styled.div`
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -42,7 +43,7 @@ const Container = styled.div`
   > div {
     ${fadeIn(0)};
   }
-`;
+`);
 
 const TermsContainer = styled.div`
   border-top: 1px solid rgba(0, 0, 0, 0.3);

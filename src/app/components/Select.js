@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'theming';
 
-export default styled.select`
+export default withTheme(styled.select`
   transition: 0.3s ease border-color;
   background-color: rgba(0, 0, 0, 0.3);
   border: none;
@@ -19,4 +20,4 @@ export default styled.select`
   &:focus {
     border-color: ${props => props.theme.secondary.clearer(0.6)};
   }
-`;
+`);

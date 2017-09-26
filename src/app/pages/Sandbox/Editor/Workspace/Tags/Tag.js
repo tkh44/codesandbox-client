@@ -1,9 +1,10 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
+import { withTheme } from 'theming';
 
 import CrossIcon from 'react-icons/lib/md/clear';
 
-const Container = styled.span`
+const Container = withTheme(styled.span`
   position: relative;
   color: white;
   font-size: 0.875rem;
@@ -12,8 +13,8 @@ const Container = styled.span`
   border-radius: 4px;
   font-weight: 400;
 
-  ${props => props.canRemove && css`padding-right: 1.5rem;`};
-`;
+  ${props => props.canRemove && css`)padding-right: 1.5rem;`};
+`);
 
 const DeleteIcon = styled(CrossIcon)`
   transition: 0.3s ease all;

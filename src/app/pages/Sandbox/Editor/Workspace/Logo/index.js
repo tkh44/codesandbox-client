@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react';
-import styled, { injectGlobal } from 'styled-components';
+import styled, { injectGlobal } from 'react-emotion';
+import { withTheme } from 'theming';
 
 import GithubIcon from 'react-icons/lib/go/mark-github';
 
@@ -9,7 +10,7 @@ import LogoIcon from 'app/components/Logo';
 import Tooltip from 'app/components/Tooltip';
 import theme from 'common/theme';
 
-const Container = styled.a`
+const Container = withTheme(styled.a`
   display: flex;
   position: relative;
   align-items: center;
@@ -21,7 +22,7 @@ const Container = styled.a`
   border-bottom: 1px solid ${props => props.theme.background2};
   overflow: hidden;
   text-decoration: none;
-`;
+`);
 
 const Title = styled.h1`
   font-size: 1rem;
